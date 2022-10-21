@@ -283,7 +283,7 @@ $(document).ready(function(){
             }
             function editDataCall(id){
                 console.log(id)
-                fetch("http://34.221.9.172:8080/api/getaccessories?id="+id,{
+                fetch("http://44.237.185.114:8080/api/getaccessories?id="+id,{
                     method:"GET",
                 }).then((res)=>res.json()).then((response)=>{
                     console.log(id)
@@ -322,7 +322,7 @@ $(document).ready(function(){
             payload['status']=document.getElementById("status").value;
             payload['typeofdevice']=document.getElementById("typeofdevice").value;*/
 
-            fetch("http://34.221.9.172:8080/api/addaccessories",{
+            fetch("http://44.237.185.114:8080/api/addaccessories",{
                 method:"POST",
                 mode:"cors",
                 headers:{
@@ -352,7 +352,7 @@ clearFormData();
           function editData(){
             var formData=getFormData();
             formData['id'] = editFormData.id;
-            fetch("http://34.221.9.172:8080/api/updateaccessories?id="+ formData['id'],{
+            fetch("http://44.237.185.114:8080/api/updateaccessories?id="+ formData['id'],{
                 method:"PUT",
                 mode:"cors",
                 headers:{
@@ -369,7 +369,7 @@ clearFormData();
           }
 
             function getData(){
-                fetch("http://34.221.9.172:8080/api/getaccessories").then(
+                fetch("http://44.237.185.114:8080/api/getaccessories").then(
                     (res)=>res.json()
                 ).then((response)=>{
                     var tmpData="";
@@ -399,7 +399,7 @@ clearFormData();
             getData();
 
             function deleteData(id){
-                fetch("http://34.221.9.172:8080/api/deleteaccessories/"+id,{
+                fetch("http://44.237.185.114:8080/api/deleteaccessories/"+id,{
                     method:"DELETE",
                 }).then((res)=>res.json()).then(
                     (response)=>{
