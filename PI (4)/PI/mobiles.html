@@ -327,7 +327,7 @@ var editFormData;
             }
             function editDataCall(id){
                 console.log(id)
-                fetch("http://34.221.9.172:8080/api/getmobiles?id="+id,{
+                fetch("http://44.237.185.114:8080/api/getmobiles?id="+id,{
                     method:"GET",
                 }).then((res)=>res.json()).then((response)=>{
                     console.log(id)
@@ -356,7 +356,7 @@ var editFormData;
 function editData(){
             var formData=getFormData();
             formData['id'] = editFormData.id;
-            fetch("http://34.221.9.172:8080/api/updatemobiles?id="+ formData['id'],{
+            fetch("http://44.237.185.114:8080/api/updatemobiles?id="+ formData['id'],{
                 method:"PUT",
                 mode:"cors",
                 headers:{
@@ -388,7 +388,7 @@ function editData(){
             payload['status']=document.getElementById("status").value;
             payload['type']=document.getElementById("type").value;*/
 
-            fetch("http://34.221.9.172:8080/api/addmobiles",{
+            fetch("http://44.237.185.114:8080/api/addmobiles",{
                 method:"POST",
                 mode:"cors",
                 headers:{
@@ -421,7 +421,7 @@ function editData(){
           } 
             //get all mobiles
             function getData(){
-                fetch("http://34.221.9.172:8080/api/getmobiles").then(
+                fetch("http://44.237.185.114:8080/api/getmobiles").then(
                     (res)=>res.json()
                 ).then((response)=>{
                     var tmpData="";
@@ -455,7 +455,7 @@ function editData(){
             
             //delete mobile
             function deleteData(id){
-                fetch("http://34.221.9.172:8080/api/deletemobiles/"+id,{
+                fetch("http://44.237.185.114:8080/api/deletemobiles/"+id,{
                     method:"DELETE",
                 }).then((res)=>res.json()).then(
                     (response)=>{
