@@ -311,7 +311,7 @@
         }
         function editDataCall(id) {
             console.log(id)
-            fetch("http://34.221.9.172:8080/api/server?id=" + id, {
+            fetch("http://44.237.185.114:8080/api/server?id=" + id, {
                 method: "GET",
             }).then((res) => res.json()).then((response) => {
                 console.log(id)
@@ -341,7 +341,7 @@
         function editData() {
             var formData = getFormData();
             formData['id'] = editFormData.id;
-            fetch("http://34.221.9.172:8080/api/updateserver?id=" + formData['id'], {
+            fetch("http://44.237.185.114:8080/api/updateserver?id=" + formData['id'], {
                 method: "PUT",
                 mode: "cors",
                 headers: {
@@ -370,7 +370,7 @@
             payload['status']=document.getElementById("status").value;
             payload['typeofdevice']=document.getElementById("typeofdevice").value;*/
 
-            fetch("http://34.221.9.172:8080/api/addserver", {
+            fetch("http://44.237.185.114:8080/api/addserver", {
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -406,7 +406,7 @@
 
 
         function getData() {
-            fetch("http://34.221.9.172:8080/api/server").then(
+            fetch("http://44.237.185.114:8080/api/server").then(
                 (res) => res.json()
             ).then((response) => {
                 var tmpData = "";
@@ -440,7 +440,7 @@
             //alert("Successfully Deleted !");
         //}
         function deleteData(id) {
-            fetch("http://34.221.9.172:8080/api/deleteserver/" + id, {
+            fetch("http://44.237.185.114:8080/api/deleteserver/" + id, {
                 method: "DELETE",
             }).then((res) => res.json()).then(
                 (response) => {
